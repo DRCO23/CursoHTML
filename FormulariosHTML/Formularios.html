@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Forms</title>
+</head>
+<body>
+<form action="cadastro.php" method="POST" enctype="application/x-www-form-urlencoded" name="formulariohtml">
+    <fieldset>
+        <legend>Formulários</legend>
+
+    Nome:<br>
+    <input type="name" name="nome"><br>
+    Senha:<br>
+    <input type="password" name="senha"><br>
+    Email:<br>
+    <input type="email" name="email" required autocomplete="on" placeholder="seuemail@gmail.com">
+    <br><br>
+    <!--required = torna o campo obrigatório, autocomplete = sugere complemento
+     placeholder = deixa texto sugestivo no campo-->
+
+     Arquivo:<br>
+     <input type="file" name="arquivo"><br><br>
+
+     Passar parâmetros
+     <input type="hidden" name="parametros"><br><br> <!--Serve para passar parâmetros em PHP-->
+
+     URL<br>
+     <input type="url" name="site"><br><br> <!--Inserir URL-->
+
+     Search<br>
+     <input type="search" name="pesquisa"><br><br> <!--Campo de pesquisa-->
+
+     Telefone<br>
+     <input type="tel" name="telefone"><br><br> <!--Inserir telefone-->
+
+     Data<br>
+     <input type="date" name="data" min="2000-12-31" max="2022-12-31"><br><br> 
+     <!--Min e Max para data-->
+
+     Hora<br>
+     <input type="time" name="hora"><br><br>
+
+     Mês e ano<br>
+     <input type="month" name="mes-ano"><br><br>
+
+     Semana<br>
+     <input type="week" name="semana"><br><br>
+
+     Data e hora<br>
+     <input type="datetime-local" name="data-hora"><br><br>
+
+     Escolha seu veículo (SELECT):<br>
+     <select name="veiculo">
+        <optgroup label="Carros">
+            <option value="ferrari">Ferrari</option>
+            <option value="tesla">Tesla</option>
+        </optgroup>
+
+        <optgroup label="Motos">
+            <option value="xj6">XJ6</option>
+            <option value="kawasaki" selected >Kawasaki</option> 
+            <!--selected para ja iniciar marcado-->
+        </optgroup>
+     </select><br><br>
+
+     Escolha um curso (DATALIST):<br>
+        <input name="cursos" list="lista-cursos"> <!--Encontra a lista pelo ID e LIST-->
+        <datalist id="lista-cursos">
+            <option value="HTML5">HTML5</option>
+            <option value="CSS3">CSS3</option>
+            <option value="CSS3">JavaScript</option>
+        </datalist><br><br>
+
+
+    Time (RADIO)<br>
+    <input type="radio" name="time" value="corinthians"> Corinthians<br>
+    <input type="radio" name="time" value="santos"> Santos<br>
+    <input type="radio" name="time" value="sao paulo"> São Paulo<br>
+    <input type="radio" name="time" value="palmeiras"> Palmeiras<br><br>
+
+    Cores(CHECKBOX)<br>
+    <input type="checkbox" name="cor" value="azul"> Azul<br>
+    <input type="checkbox" name="cor" value="vermelho"> Vermelho<br>  
+    <input type="checkbox" name="cor" value="verde"> Verde<br>
+    <input type="checkbox" name="cor" value="amarelo"> Amarelo<br><br>
+
+    Seletor de cores<br>
+    <input type="color" name="cor"> <br><br><!--campo para escolha de cor-->
+    <!-- acrescentar checked na checkbox para iniciar marcado-->
+
+    Quantidade<br>
+    <input type="number" name="quantidade" min="0" max="500" step="10"><br> 
+    <!--min = valor minimo, max = valor maximo, step = intervalo de 10 em 10-->
+    <input type="range" name="quantidade"> <br> <!--Movimenta com o cursor-->
+    
+    Digite uma mensagem:<br>
+    <textarea name="mensagem" rows="5" cols="30" spellcheck="true"></textarea><br><br>
+    <!--rows = linhas, cols = colunas, spellcheck = corretor ortográfico ligado e desligado-->
+    <button type="button">Clique-me</button><br><br>
+    <!--Botão, diferente do submit em forms-->
+
+    <input type="submit" name="btn-enviar" value="Enviar"><br>
+
+    </fieldset>
+</form>
+
+</body>
+
+</html>
